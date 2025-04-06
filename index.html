@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ateliê de Costuras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fdf6f0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff8f5;
       color: #333;
-      text-align: center;
     }
 
     header {
-      background: #c57ca4;
+      background: #d4a5a5;
       color: white;
-      padding: 2rem 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 3rem 1rem;
+      text-align: center;
     }
 
-    h1 {
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
       margin: 0;
-      font-size: 2.5rem;
     }
 
-    p {
+    header p {
       margin-top: 0.5rem;
       font-size: 1.2rem;
     }
 
-    .content {
+    section {
       padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #c57ca4;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      text-align: center;
     }
 
     .btn-whatsapp {
-      display: inline-block;
-      margin-top: 2rem;
+      display: block;
+      margin: 2rem auto;
       padding: 1rem 2rem;
       background-color: #25D366;
       color: white;
       font-size: 1.2rem;
       text-decoration: none;
       border-radius: 8px;
+      width: fit-content;
       transition: background 0.3s ease;
     }
 
@@ -50,11 +69,52 @@
       background-color: #1ebe5d;
     }
 
-    footer {
-      margin-top: 3rem;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .testimonials {
+      background-color: #fceff3;
+      border-radius: 10px;
       padding: 1rem;
+    }
+
+    .testimonial {
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    footer {
       background: #f0e3ea;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
       color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -65,22 +125,46 @@
     <p>Consertos, ajustes e costuras personalizadas com carinho e qualidade!</p>
   </header>
 
-  <div class="content">
-    <h2>Serviços oferecidos:</h2>
-    <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
+  <section>
+    <h2>Serviços oferecidos</h2>
+    <ul>
       <li>- Bainhas em calças e vestidos</li>
       <li>- Ajustes de tamanho</li>
       <li>- Troca de zíper</li>
-      <li>- E muito mais!</li>
+      <li>- Personalização de roupas</li>
     </ul>
-
-    <a class="btn-whatsapp" href="https://wa.me/55SEUNUMERO?text=Olá,%20quero%20fazer%20um%20orçamento%20de%20costura!" target="_blank">
+    <a class="btn-whatsapp" href="https://wa.me/5551990114530?text=Olá,%20quero%20fazer%20um%20orçamento%20de%20costura!" target="_blank">
       Fale conosco pelo WhatsApp
     </a>
-  </div>
+  </section>
+
+  <section>
+    <h2>Galeria</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300?text=Foto+1" alt="Exemplo de trabalho 1">
+      <img src="https://via.placeholder.com/400x300?text=Foto+2" alt="Exemplo de trabalho 2">
+      <img src="https://via.placeholder.com/400x300?text=Foto+3" alt="Exemplo de trabalho 3">
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Depoimentos</h2>
+    <div class="testimonial">"Ficou perfeito! Serviço rápido e de qualidade." - Maria</div>
+    <div class="testimonial">"Meu vestido ficou como novo! Muito obrigada pelo capricho." - Ana</div>
+    <div class="testimonial">"Atendimento excelente, recomendo demais!" - Juliana</div>
+  </section>
+
+  <section>
+    <h2>Onde estamos</h2>
+    <p style="text-align: center;">Rua Albion, 50 – Passo do Feijó, Alvorada - RS</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.0071957077963!2d-51.083710524391404!3d-29.998026774654988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951974d2f2087e65%3A0x5b6c8f8f07e64e4c!2sR.%20Albion%2C%2050%20-%20Passo%20do%20Feij%C3%B3%2C%20Alvorada%20-%20RS%2C%2094800-000!5e0!3m2!1spt-BR!2sbr!4v1712416512345" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
 
   <footer>
-    &copy; 2025 Ateliê de Costuras. Todos os direitos reservados.
+    &copy; 2025 Ateliê de Costuras. Desenvolvido com carinho.
   </footer>
 
 </body>
