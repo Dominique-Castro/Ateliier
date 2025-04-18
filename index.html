@@ -48,12 +48,15 @@
       font-weight: bold;
       border-radius: 10px;
       font-size: 1.1em;
-      transition: 0.3s;
-      margin-top: 20px;
+      margin-top: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-in-out;
     }
 
-    .btn-agendar:hover {
-      background-color: #1ebe5d;
+    .btn-agendar.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .depoimentos {
@@ -81,6 +84,13 @@
       margin-top: 40px;
     }
   </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.querySelector('.btn-agendar').classList.add('visible');
+      }, 1000);
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -92,11 +102,6 @@
     <img src="https://github.com/Dominique-Castro/Ateliier/blob/main/costureira-avatar.png?raw=true" alt="Costureira simpática" class="avatar" />
     <p>Seja bem-vindo(a) ao nosso ateliê! Entre em contato e venha transformar suas peças favoritas conosco.</p>
 
-    <a href="https://wa.me/5551990114530?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20ateli%C3%AA." 
-       class="btn-agendar" target="_blank">
-      Agendar Horário
-    </a>
-
     <iframe src="https://www.google.com/maps?q=Rua+Albion,+50,+Passo+do+Feijó,+Alvorada,+RS&output=embed"></iframe>
   </div>
 
@@ -105,6 +110,11 @@
     <div class="depoimento">“Atendimento maravilhoso e muito capricho nos ajustes. Recomendo de olhos fechados!” – Carla M.</div>
     <div class="depoimento">“Consertei um vestido que achei que não teria mais jeito. Ficou perfeito!” – Juliana S.</div>
     <div class="depoimento">“Ateliê super acolhedor e serviço rápido. Adorei!” – Fernanda R.</div>
+
+    <a href="https://wa.me/5551990114530?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20ateli%C3%AA." 
+       class="btn-agendar" target="_blank">
+      Agendar Horário
+    </a>
   </section>
 
   <footer>
